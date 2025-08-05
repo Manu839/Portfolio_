@@ -44,7 +44,7 @@ const Home = () => {
                                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                             </Link>
 <a
-    href="/Manu_Sai_Resume.pdf" // Make sure the file is placed correctly in your public/assets folder
+    href="https://drive.google.com/file/d/1EOEJjP4ImRwTjxyy100T63JdpxmZGCFo/view?usp=sharing" // Make sure the file is placed correctly in your public/assets folder
     download
     className="inline-flex items-center px-8 py-4 border-2 border-blue-500 text-blue-400 font-medium rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
 >
@@ -57,19 +57,19 @@ const Home = () => {
                         {/* Social Links */}
                         <div className="flex space-x-6">
                             <a
-                                href="https://github.com"
+                                href="https://github.com/Manu839"
                                 className="p-3 bg-gray-800 hover:bg-blue-600 rounded-lg transition-all duration-300 transform hover:scale-110 shadow-lg"
                             >
                                 <Github className="h-6 w-6" />
                             </a>
                             <a
-                                href="https://linkedin.com"
+                                href="https://www.linkedin.com/in/manu-sai-5a3b8b257"
                                 className="p-3 bg-gray-800 hover:bg-blue-600 rounded-lg transition-all duration-300 transform hover:scale-110 shadow-lg"
                             >
                                 <Linkedin className="h-6 w-6" />
                             </a>
                             <a
-                                href="mailto:contact@example.com"
+                                href="mailto:2003manusai@gmail.com"
                                 className="p-3 bg-gray-800 hover:bg-blue-600 rounded-lg transition-all duration-300 transform hover:scale-110 shadow-lg"
                             >
                                 <Mail className="h-6 w-6" />
@@ -87,7 +87,7 @@ const Home = () => {
                             <div className="relative w-full h-full bg-gradient-to-r from-blue-600 to-purple-600 rounded-full p-1">
                                 <div className="w-full h-full bg-gray-900 rounded-full flex items-center justify-center overflow-hidden">
                                     <img
-                                        src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400"
+                                        src=""
                                         alt="Profile"
                                         className="w-full h-full object-cover rounded-full"
                                     />

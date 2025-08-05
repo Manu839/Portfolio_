@@ -57,12 +57,6 @@ const Contact = () => {
             url: 'https://www.linkedin.com/in/manu-sai-5a3b8b257',
             color: 'hover:text-blue-400',
         },
-        {
-            icon: Twitter,
-            name: 'Twitter',
-            url: '#',
-            color: 'hover:text-blue-400',
-        },
     ];
 
     return (

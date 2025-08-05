@@ -1,5 +1,11 @@
 import React from 'react';
-import { ExternalLink, Github, Code } from 'lucide-react';
+import { ExternalLink, Github} from 'lucide-react';
+import farm from '../assets/farm.png';
+import stock from '../assets/stock.png';
+import upi from '../assets/upi.png';
+import youtube from '../assets/youtube.png';
+
+
 
 const Projects = () => {
    const projects = [
@@ -7,7 +13,7 @@ const Projects = () => {
         id: 1,
         title: 'YouTube Sentiment Analyzer',
         description: 'Sentiment analysis web app using React, Flask, MongoDB, and YouTube API. Processes 10,000+ comments using NLTK VADER and Plotly.',
-        image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800',
+        image: youtube,
         technologies: ['React', 'Flask', 'MongoDB', 'NLTK', 'Plotly'],
         github: 'https://github.com/Manu839/Youtube-sentiment-analysis',
         demo: '#',
@@ -17,7 +23,7 @@ const Projects = () => {
         id: 2,
         title: 'Stock Forecast & Risk Analyzer',
         description: 'Forecasting platform using FastAPI and ARIMA models for 500+ stocks, with real-time data and CAPM-based risk analytics.',
-        image: 'https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=800',
+        image: stock,
         technologies: ['React', 'FastAPI', 'Python', 'scikit-learn', 'ARIMA'],
         github: 'https://github.com/Manu839/Stocks_risk-analysis_and_prediction',
         demo: '#',
@@ -27,7 +33,7 @@ const Projects = () => {
         id: 3,
         title: 'Farm Help',
         description: 'Smart agriculture assistance platform offering crop recommendations, weather alerts, and resource links for farmers.',
-        image: 'https://images.pexels.com/photos/248280/pexels-photo-248280.jpeg?auto=compress&cs=tinysrgb&w=800',
+        image: farm,
         technologies: ['React', 'Node.js', 'MongoDB', 'OpenWeather API','FastAPI', 'Random Forest'],
         github: 'https://github.com/Manu839/Farm_help',
         demo: '#',
@@ -37,7 +43,7 @@ const Projects = () => {
         id: 4,
         title: 'UPI Fraud Detection System',
         description: 'Machine learning-based system to detect fraudulent UPI transactions using transaction patterns and user behavior modeling.',
-        image: 'https://images.pexels.com/photos/3943722/pexels-photo-3943722.jpeg?auto=compress&cs=tinysrgb&w=800',
+        image: upi,
         technologies: ['Python', 'Scikit-learn', 'Pandas', 'XGBoost'],
         github: 'https://github.com/Manu839/Payment-Fraud_detection',
         demo: '#',
