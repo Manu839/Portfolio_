@@ -102,12 +102,8 @@ const Footer = () => {
                 <div className="mt-12 pt-8 border-t border-gray-800">
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                         <div className="flex items-center space-x-2 text-gray-400">
-                            <span>© {new Date().getFullYear()} Made with</span>
-                            <Heart className="h-4 w-4 text-red-500 animate-pulse" />
+                            <span>© {new Date().getFullYear()} Made</span>
                             <span>by Manu Sai</span>
-                        </div>
-                        <div className="flex items-center space-x-4 text-sm text-gray-400">
-                            <span>Built with React & Tailwind CSS</span>
                         </div>
                     </div>
                 </div>
