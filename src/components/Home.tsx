@@ -4,21 +4,24 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useMemo } from "react";
+
 
 /* ================= TYPEWRITER HOOK ================= */
-const useTypewriter = (words: string | any[], speed = 80, delay = 1500) => {
+const useTypewriter = (
+  words: string[],
+  speed = 80,
+  delay = 1500
+) => {
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    if (
-      subIndex === words[index].length + 1 &&
-      !deleting
-    ) {
-      setTimeout(() => setDeleting(true), delay);
-      return;
+    if (subIndex === words[index].length + 1 && !deleting) {
+      const timeout = setTimeout(() => setDeleting(true), delay);
+      return () => clearTimeout(timeout);
     }
 
     if (subIndex === 0 && deleting) {
@@ -33,16 +36,19 @@ const useTypewriter = (words: string | any[], speed = 80, delay = 1500) => {
     }, deleting ? speed / 2 : speed);
 
     return () => clearTimeout(timeout);
-  }, [subIndex, index, deleting]);
+  }, [subIndex, index, deleting, words, speed, delay]);
 
   return text;
 };
 
+
 const Home = () => {
-  const typingText = useTypewriter([
-    "Software Developer",
-    "Full Stack Developer",
-  ]);
+  const words = useMemo(
+    () => ["Software Developer", "Full Stack Developer"],
+    []
+  );
+
+  const typingText = useTypewriter(words);
 
   return (
     <section className="min-h-screen animated-gradient flex items-center justify-center relative overflow-hidden">
@@ -104,17 +110,33 @@ const Home = () => {
             </div>
 
             {/* Socials */}
-            <div className="flex space-x-5 pt-4">
-              {[Github, Linkedin, Mail].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="p-3 bg-gray-800 hover:bg-blue-600 rounded-lg transition transform hover:scale-110"
-                >
-                  <Icon className="h-6 w-6" />
-                </a>
-              ))}
-            </div>
+<div className="flex space-x-5 pt-4">
+  <a
+    href="https://github.com/Manu839"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="p-3 bg-gray-800 hover:bg-blue-600 rounded-lg transition transform hover:scale-110"
+  >
+    <Github className="h-6 w-6" />
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/manu-sai-5a3b8b257/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="p-3 bg-gray-800 hover:bg-blue-600 rounded-lg transition transform hover:scale-110"
+  >
+    <Linkedin className="h-6 w-6" />
+  </a>
+
+  <a
+    href="mailto:2003manusai@email.com"
+    className="p-3 bg-gray-800 hover:bg-blue-600 rounded-lg transition transform hover:scale-110"
+  >
+    <Mail className="h-6 w-6" />
+  </a>
+</div>
+
           </motion.div>
 
           {/* RIGHT – IMAGE */}

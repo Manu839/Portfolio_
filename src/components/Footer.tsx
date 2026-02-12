@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Code2, Github, Linkedin, Mail } from 'lucide-react';
+import { Code2, Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
     const socialLinks = [
